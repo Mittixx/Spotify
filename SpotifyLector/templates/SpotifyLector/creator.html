@@ -71,32 +71,85 @@
 
 
     <div class="ranges">
-        <p>Nombre de musiques </p>
-        <input id="numberSongs" type="range" max="100" min="0" step="1">
+        <div class="row">
+            <p>Nombre de musiques </p>
+            <input id="numberSongs" class="rangeIn" type="range" max="100" min="0" step="1">
+            <ul class="row-label">
+                <li>0</li>
+                <li class="my-value">50</li>
+                <li>100</li>
+            </ul>
+        </div>
 
-        <p>Acoustique</p>
-        <input id="acousticness" type="range" max="1.0" min="0.0" step="0.1">
+        <div class="row">
+            <p>Acoustique</p>
+            <input id="acousticness" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+            <ul class="row-label">
+                <li>0</li>
+                <li class="my-value">0.5</li>
+                <li>1.0</li>
+            </ul>
+        </div>
 
-        <p title="De 0.0 (peu dansante) à 1.0 (très dansante).">Dansante</p>
-        <input id="danceability" type="range" max="1.0" min="0.0" step="0.1">
+        <div class="row">
+            <p title="De 0.0 (peu dansante) à 1.0 (très dansante).">Dansante</p>
+            <input id="danceability" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+            <ul class="row-label">
+                <li>0.0</li>
+                <li class="my-value">0.5</li>
+                <li>1.0</li>
+            </ul>
+        </div>
 
-        <p title="Une musique très énergique (1.0) sera bruyante, rapide et puissante.">Energétique</p>
-        <input id="energy" type="range" max="1.0" min="0.0" step="0.1">
+        <div class="row">
+            <p title="Une musique très énergique (1.0) sera bruyante, rapide et puissante.">Energétique</p>
+            <input id="energy" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+            <ul class="row-label">
+                <li>0.0</li>
+                <li class="my-value">0.5</li>
+                <li>1.0</li>
+            </ul>
+        </div>
 
-        <p title="1.0 représente une musique sans vocal, au dessus de 0.5
-        les musiques comporteront très peu de vocal.">Instrumentale</p>
-        <input id="instrumentalness" type="range" max="1.0" min="0.0" step="0.1">
+        <div class="row">
+            <p title="1.0 représente une musique sans vocal, au dessus de 0.5
+            les musiques comporteront très peu de vocal.">Instrumentale</p>
+            <input id="instrumentalness" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+            <ul class="row-label">
+                <li>0.0</li>
+                <li class="my-value">0.5</li>
+                <li>1.0</li>
+            </ul>
+        </div>
 
-        <p>Popularité</p>
-        <input id="popularity" type="range" max="100" min="0" step="1">
-
+         <div class="row">
+            <p>Popularité</p>
+            <input id="popularity" class="rangeIn" type="range" max="100" min="0" step="1">
+            <ul class="row-label">
+                <li>0</li>
+                <li class="my-value">50</li>
+                <li>100</li>
+            </ul>
+        </div>
         {% comment %}<p>Paroles</p>
         <input id="speechiness" type="range" max="1.0" min="0.0" step="0.1">
         {% endcomment %}
+        <div class="row">
+            <p title="0.0 pour des musiques tristes et dépressives, 1.0 pour des musiques euphoriques et joyeuses.">Positivité</p>
+            <input id="valence" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+            <ul class="row-label">
+                <li>0.0</li>
+                <li class="my-value">0.5</li>
+                <li>1.0</li>
+            </ul>
+        </div>
 
-        <p title="0.0 pour des musiques tristes et dépressives, 1.0 pour des musiques euphoriques et joyeuses.">Positivité</p>
-        <input id="valence" type="range" max="1.0" min="0.0" step="0.1">
+
+    <div id="buttonCreate">
+        <input class="buttonCreate" type="submit" value="Créer playlist ! ">
     </div>
+    </div>
+
 {% endblock %}
 
 {%  block scripts %}

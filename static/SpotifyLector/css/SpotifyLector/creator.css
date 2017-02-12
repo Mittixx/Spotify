@@ -114,29 +114,48 @@
   display: flex;
   flex-direction: column;
 }
-/* line 125, ../../../../sass/SpotifyLector/creator.scss */
+/* line 126, ../../../../sass/SpotifyLector/creator.scss */
+#content .ranges .row {
+  margin: 14px;
+}
+/* line 129, ../../../../sass/SpotifyLector/creator.scss */
+#content .ranges ul.row-label {
+  color: #fff;
+  width: 333px;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 136, ../../../../sass/SpotifyLector/creator.scss */
+#content .ranges ul.row-label li {
+  display: inline;
+  justify-content: space-between;
+}
+/* line 142, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input {
   width: 333px;
   margin: auto;
 }
-/* line 129, ../../../../sass/SpotifyLector/creator.scss */
+/* line 146, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input[type="range"] {
+  display: flex;
   -webkit-appearance: none;
   background: transparent;
   margin-bottom: 20px;
 }
-/* line 135, ../../../../sass/SpotifyLector/creator.scss */
+/* line 154, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input[type=range]:focus {
   outline: none;
 }
-/* line 139, ../../../../sass/SpotifyLector/creator.scss */
+/* line 158, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input[type=range]::-ms-track {
   cursor: pointer;
   background: transparent;
   border-color: transparent;
   color: transparent;
 }
-/* line 145, ../../../../sass/SpotifyLector/creator.scss */
+/* line 164, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 36px;
@@ -148,7 +167,7 @@
   margin-top: -14px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
-/* line 157, ../../../../sass/SpotifyLector/creator.scss */
+/* line 176, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input[type="range"]::-webkit-slider-runnable-track {
   margin: auto;
   width: 50%;
@@ -158,4 +177,31 @@
   background: #333333;
   border-radius: 5px;
   border: 0.2px solid #010101;
+}
+/* line 187, ../../../../sass/SpotifyLector/creator.scss */
+#content #buttonCreate {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+/* line 193, ../../../../sass/SpotifyLector/creator.scss */
+#content .buttonCreate {
+  background-color: #74A82A;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  border-radius: 40px;
+  padding: 30px 50px;
+  border-style: none;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 800;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+/* line 208, ../../../../sass/SpotifyLector/creator.scss */
+#content .buttonCreate:hover {
+  background-color: #446001;
+  color: #fff;
+  cursor: pointer;
 }

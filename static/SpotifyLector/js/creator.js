@@ -20,19 +20,25 @@ $(".button-genre").click( function () {
     }
 
 
-})
+});
 
 $(".button-more").click( function () {
     if ($(this).hasClass("more-clicked"))
     {
-        $(".button-genre.more").css('display','none');
+        $(".button-genre.more").slideUp();
         $(this).text("Plus de genre");
         $(this).removeClass("more-clicked");
     }
     else {
-        $(".button-genre.more").css('display','inline-flex');
+        // $(".button-genre.more").css('display','inline-flex');
+        $(".button-genre.more").slideDown();
         $(this).addClass("more-clicked");
         $(this).text("Moins de genre");
     }
 
-})
+});
+
+$('.rangeIn').change( function() {
+    alert($(this).val());
+    $(this).closest('.my-value').text($(this).val());
+});
