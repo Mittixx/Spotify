@@ -1,8 +1,91 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+{% block links %}
+    <link rel="stylesheet"
+          type="text/css"
+          media="all"
+          href="{% static "SpotifyLector/css/SpotifyLector/creator.css" %}"
+    />
+{% endblock %}
 
 {% block title %}
     Spotify Playlist Creator
 {% endblock %}
 {%  block titleHeader %}
     Spotify Playlist Creator
+{% endblock %}
+
+{% block content %}
+    <div class="genre">
+        <p>Commence par choisir entre 1 et 3 styles musicaux parmis ceux proposés en dessous,
+        le bouton Plus de genre te permets d'avoir un choix plus large.</p>
+        <div id="first" class="column">
+            <a class="button-genre principal">Blues</a>
+            <a class="button-genre principal">Bossanova</a>
+            <a class="button-genre principal">Classical</a>
+        </div>
+        <div id="second" class="column">
+            <a class="button-genre principal">Deep House</a>
+            <a class="button-genre principal">Hip-Hop</a>
+            <a class="button-genre principal">Indie</a>
+        </div>
+        <div id="third" class="column">
+            <a class="button-genre principal">Jazz</a>
+            <a class="button-genre principal">Pop</a>
+            <a class="button-genre principal">Rock</a>
+        </div>
+        <div id="fourth" class="column">
+            <a class="button-genre principal">Rock alternatif</a>
+            <a class="button-genre principal">Soul</a>
+            <a class="button-genre principal">Study</a>
+        </div>
+        <div>
+            <a class="button-more">Plus de genre</a>
+        </div>
+        <div>
+            <a class="button-genre more">Acoustique</a>
+            <a class="button-genre more">Chill</a>
+            <a class="button-genre more">Dub</a>
+            <a class="button-genre more">Folk</a>
+            <a class="button-genre more">Funk</a>
+            <a class="button-genre more">Gospel</a>
+            <a class="button-genre more">Piano</a>
+            <a class="button-genre more">Power-Pop</a>
+            <a class="button-genre more">Punk-Rock</a>
+            <a class="button-genre more">Rainy-Day</a>
+            <a class="button-genre more">Road-Trip</a>
+            <a class="button-genre more">Ska</a>
+        </div>
+
+    </div>
+
+
+
+    <div class="ranges">
+        <p>Nombre de musiques </p>
+        <input id="numberSongs" type="range" max="100" min="0" step="1">
+
+        <p>Acoustique</p>
+        <input id="acousticness" type="range" max="1.0" min="0.0" step="0.1">
+
+        <p title="De 0.0 (peu dansante) à 1.0 (très dansante).">Dansante</p>
+        <input id="danceability" type="range" max="1.0" min="0.0" step="0.1">
+
+        <p title="Une musique très énergique (1.0) sera bruyante, rapide et puissante.">Energétique</p>
+        <input id="energy" type="range" max="1.0" min="0.0" step="0.1">
+
+        <p title="1.0 représente une musique sans vocal, au dessus de 0.5
+        les musiques comporteront très peu de vocal.">Instrumentale</p>
+        <input id="instrumentalness" type="range" max="1.0" min="0.0" step="0.1">
+
+        <p>Popularité</p>
+        <input id="popularity" type="range" max="100" min="0" step="1">
+
+        {% comment %}<p>Paroles</p>
+        <input id="speechiness" type="range" max="1.0" min="0.0" step="0.1">
+        {% endcomment %}
+
+        <p title="0.0 pour des musiques tristes et dépressives, 1.0 pour des musiques euphoriques et joyeuses.">Positivité</p>
+        <input id="valence" type="range" max="1.0" min="0.0" step="0.1">
+    </div>
 {% endblock %}

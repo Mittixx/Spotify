@@ -1,0 +1,156 @@
+@import '../../../../.gem/ruby/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/css3';
+
+$first-first :#54A1BF;
+$first-second:#FF846B;
+$first-third:#57D084;
+
+$second-first:#FFA94C;
+$second-second:#3584A3;
+$second-third:#E94725;
+
+$third-first:#FF6B4C;
+$third-second:#1BA950;
+$third-third:#FFC98F;
+
+$fourth-first:#B0DDEE;
+$fourth-second:#E98B25;
+$fourth-third:#38BB69;
+
+
+#body {
+  width:85%;
+}
+
+#content {
+  width: 75%;
+
+
+  .genre {
+    display: flex;
+    flex-direction: column;
+      .column {
+        display: inline-flex;
+        justify-content: center;
+      }
+      #first a:first-child {
+        color: $first-first;
+        border-color: $first-first;
+      }
+      #first a:nth-child(2) {
+        color: $first-second;
+        border-color: $first-second;
+      }
+      #first a:nth-child(3) {
+        color: $first-third;
+        border-color: $first-third;
+      }
+
+      #second a:first-child {
+        color: $second-first;
+        border-color: $second-first;
+      }
+      #second a:nth-child(2) {
+        color: $second-second;
+        border-color: $second-second;
+      }
+      #second a:nth-child(3) {
+        color: $second-third;
+        border-color: $second-third;
+      }
+
+      #third a:first-child {
+        color: $third-first;
+        border-color: $third-first;
+      }
+      #third a:nth-child(2) {
+        color: $third-second;
+        border-color: $third-second;
+      }
+      #third a:nth-child(3) {
+        color: $third-third;
+        border-color: $third-third;
+      }
+
+      #fourth a:first-child {
+        color: $fourth-first;
+        border-color: $fourth-first;
+      }
+      #fourth a:nth-child(2) {
+        color: $fourth-second;
+        border-color: $fourth-second;
+      }
+      #fourth a:nth-child(3) {
+        color: $fourth-third;
+        border-color: $fourth-third;
+      }
+    .button-genre {
+      text-transform: uppercase;
+    }
+    .button-genre.principal{
+      cursor: pointer;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+      width: 160px;
+      padding: 15px 10px;
+      margin: 5px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+
+    }
+
+    .button-genre.more{
+      display: none;
+    }
+
+  }
+
+
+  .ranges {
+
+    display: flex;
+    flex-direction: column;
+    input {
+      width: 75%;
+      margin: auto;
+    }
+    input[type="range"] {
+      -webkit-appearance: none;
+      background: transparent;
+      margin-bottom: 20px;
+    }
+
+    input[type=range]:focus {
+      outline: none;
+    }
+
+    input[type=range]::-ms-track {
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 36px;
+      width: 16px;
+      border: 1px solid #000000;
+      border-radius: 3px;
+      background: #74A82A;
+      cursor: pointer;
+      margin-top: -14px;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      margin: auto;
+      width: 50%;
+      cursor: pointer;
+      height: 8.4px;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      background: #333333;
+      border-radius: 5px;
+      border:0.2px solid #010101;
+    }
+  }
+}

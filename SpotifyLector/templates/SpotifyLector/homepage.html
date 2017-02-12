@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-
+{% load staticfiles %}
+{% block links %}
+    <link rel="stylesheet"
+          type="text/css"
+          media="all"
+          href="{% static "SpotifyLector/css/SpotifyLector/homepage.css" %}"
+    />
+{% endblock %}
 {% block title %}
     Spotify Playlist Creator
 {% endblock %}
