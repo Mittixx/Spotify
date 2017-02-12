@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Spotify playlist creator {% endblock %}</title>
+    {% load staticfiles %}
+    {% block links %}{% endblock %}
+    <link rel="stylesheet" type="text/css" media="all" href="{% static "SpotifyLector/css/SpotifyLector/base.css" %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'SpotifyLector/img/faviconSpotify.ico' %}"/>
+</head>
+<body>
+
+    <header class="dashed-shadow title">{% block titleHeader %} Spotify playlist creator {% endblock %}</header>
+    <div id="body">
+            {% comment %}
+            <nav>
+                {% block nav %}
+                <ul>
+                    <li><a href="/SpotifyLector">Accueil</a> </li>
+                    <li><a href="{% url 'date' %}">Date</a> </li>
+                </ul>
+                {% endblock %}
+            </nav>
+            {% endcomment %}
+            <section id="content">
+                    {% block content %}{% endblock %}
+            </section>
+
+        <footer>&copy; Tanguy Blochet</footer>
+    </div>
+    {%  block scripts %}{%  endblock %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    Spotify Playlist Creator
+{% endblock %}
+{%  block titleHeader %}
+    Spotify Playlist Creator
+{% endblock %}
+
+{% block content %}
+    <p>
+        Bienvenue dans le créateur de playlist Spotify. Ce outil va
+        vous permettre de créer des playlists hautement personnalisées
+        selon votre humeur, vos envies, les styles que vous aimés et
+        pleins d'autres options.
+    </p>
+
+    <a href="https://accounts.spotify.com/authorize?client_id=b7594f99e8ae44ccbbfc546c6377cb10&response_type=code&redirect_uri=http://localhost:8000/SpotifyPlCreator/creator/auth&scope=user-read-private%20user-read-email">
+        <input class ="btnStart" type="button" value="Commencer !" onclick="">
+    </a>
+{% endblock %}
+{%  block scripts %}
+    <script src={% static "SpotifyLector/js/jquery-3.1.1.js" %}></script>
+    <script src={% static "SpotifyLector/js/base.js" %}></script>
+{%  endblock %}
