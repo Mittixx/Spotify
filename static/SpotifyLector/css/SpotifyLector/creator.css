@@ -18,71 +18,71 @@
   justify-content: center;
 }
 /* line 35, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #first a:first-child {
+#content .genre #first a:first-child, #content .genre #more-second a:first-child {
   color: #54A1BF;
   border-color: #54A1BF;
 }
 /* line 39, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #first a:nth-child(2) {
+#content .genre #first a:nth-child(2), #content .genre #more-first a:first-child {
   color: #FF846B;
   border-color: #FF846B;
 }
 /* line 43, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #first a:nth-child(3) {
+#content .genre #first a:nth-child(3), #content .genre #more-third a:first-child {
   color: #57D084;
   border-color: #57D084;
 }
 /* line 48, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #second a:first-child {
+#content .genre #second a:first-child, #content .genre #more-first a:nth-child(3) {
   color: #FFA94C;
   border-color: #FFA94C;
 }
 /* line 52, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #second a:nth-child(2) {
+#content .genre #second a:nth-child(2), #content .genre #more-third a:nth-child(2) {
   color: #3584A3;
   border-color: #3584A3;
 }
 /* line 56, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #second a:nth-child(3) {
+#content .genre #second a:nth-child(3), #content .genre #more-second a:nth-child(2) {
   color: #E94725;
   border-color: #E94725;
 }
 /* line 61, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #third a:first-child {
+#content .genre #third a:first-child, #content .genre #more-fourth a:first-child {
   color: #FF6B4C;
   border-color: #FF6B4C;
 }
 /* line 65, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #third a:nth-child(2) {
+#content .genre #third a:nth-child(2), #content .genre #more-first a:nth-child(2) {
   color: #1BA950;
   border-color: #1BA950;
 }
 /* line 69, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #third a:nth-child(3) {
+#content .genre #third a:nth-child(3), #content .genre #more-second a:nth-child(3) {
   color: #FFC98F;
   border-color: #FFC98F;
 }
 /* line 74, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #fourth a:first-child {
+#content .genre #fourth a:first-child, #content .genre #more-fourth a:last-child {
   color: #B0DDEE;
   border-color: #B0DDEE;
 }
 /* line 78, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #fourth a:nth-child(2) {
+#content .genre #fourth a:nth-child(2), #content .genre #more-fourth a:nth-child(2) {
   color: #E98B25;
   border-color: #E98B25;
 }
 /* line 82, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre #fourth a:nth-child(3) {
+#content .genre #fourth a:nth-child(3), #content .genre #more-third a:nth-child(3) {
   color: #38BB69;
   border-color: #38BB69;
 }
-/* line 86, ../../../../sass/SpotifyLector/creator.scss */
+/* line 87, ../../../../sass/SpotifyLector/creator.scss */
 #content .genre .button-genre {
   text-transform: uppercase;
 }
-/* line 89, ../../../../sass/SpotifyLector/creator.scss */
-#content .genre .button-genre.principal {
+/* line 90, ../../../../sass/SpotifyLector/creator.scss */
+#content .genre .button-genre.principal, #content .genre .button-genre.more {
   cursor: pointer;
   text-align: center;
   font-weight: bold;
@@ -93,38 +93,50 @@
   border: 1px solid #fff;
   border-radius: 5px;
 }
-/* line 102, ../../../../sass/SpotifyLector/creator.scss */
+/* line 103, ../../../../sass/SpotifyLector/creator.scss */
 #content .genre .button-genre.more {
   display: none;
 }
-/* line 109, ../../../../sass/SpotifyLector/creator.scss */
+/* line 107, ../../../../sass/SpotifyLector/creator.scss */
+#content .genre .button-more {
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  width: 160px;
+  padding: 15px 10px;
+  margin: 5px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+/* line 122, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges {
   display: flex;
   flex-direction: column;
 }
-/* line 113, ../../../../sass/SpotifyLector/creator.scss */
+/* line 125, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input {
-  width: 75%;
+  width: 333px;
   margin: auto;
 }
-/* line 117, ../../../../sass/SpotifyLector/creator.scss */
+/* line 129, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input[type="range"] {
   -webkit-appearance: none;
   background: transparent;
   margin-bottom: 20px;
 }
-/* line 123, ../../../../sass/SpotifyLector/creator.scss */
+/* line 135, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input[type=range]:focus {
   outline: none;
 }
-/* line 127, ../../../../sass/SpotifyLector/creator.scss */
+/* line 139, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input[type=range]::-ms-track {
   cursor: pointer;
   background: transparent;
   border-color: transparent;
   color: transparent;
 }
-/* line 133, ../../../../sass/SpotifyLector/creator.scss */
+/* line 145, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 36px;
@@ -136,12 +148,12 @@
   margin-top: -14px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
-/* line 145, ../../../../sass/SpotifyLector/creator.scss */
+/* line 157, ../../../../sass/SpotifyLector/creator.scss */
 #content .ranges input[type="range"]::-webkit-slider-runnable-track {
   margin: auto;
   width: 50%;
   cursor: pointer;
-  height: 8.4px;
+  height: 10px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   background: #333333;
   border-radius: 5px;

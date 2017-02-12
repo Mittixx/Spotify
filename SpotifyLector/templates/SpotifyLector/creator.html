@@ -35,26 +35,35 @@
             <a class="button-genre principal">Rock</a>
         </div>
         <div id="fourth" class="column">
-            <a class="button-genre principal">Rock alternatif</a>
+            <a class="button-genre principal">Rock alt</a>
             <a class="button-genre principal">Soul</a>
             <a class="button-genre principal">Study</a>
         </div>
-        <div>
-            <a class="button-more">Plus de genre</a>
-        </div>
-        <div>
+
+
+        <div id="more-first" class="column">
             <a class="button-genre more">Acoustique</a>
             <a class="button-genre more">Chill</a>
             <a class="button-genre more">Dub</a>
+        </div>
+        <div id="more-second" class="column">
             <a class="button-genre more">Folk</a>
             <a class="button-genre more">Funk</a>
             <a class="button-genre more">Gospel</a>
+        </div>
+        <div id="more-third" class="column">
             <a class="button-genre more">Piano</a>
             <a class="button-genre more">Power-Pop</a>
             <a class="button-genre more">Punk-Rock</a>
+        </div>
+        <div id="more-fourth" class="column">
             <a class="button-genre more">Rainy-Day</a>
             <a class="button-genre more">Road-Trip</a>
             <a class="button-genre more">Ska</a>
+        </div>
+
+        <div id="more" class="column">
+            <a class="button-more">Plus de genre</a>
         </div>
 
     </div>
@@ -89,3 +98,8 @@
         <input id="valence" type="range" max="1.0" min="0.0" step="0.1">
     </div>
 {% endblock %}
+
+{%  block scripts %}
+    <script src={% static "SpotifyLector/js/jquery-3.1.1.js" %}></script>
+    <script src={% static "SpotifyLector/js/creator.js" %}></script>
+{%  endblock %}

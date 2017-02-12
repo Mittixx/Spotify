@@ -32,61 +32,62 @@ $fourth-third:#38BB69;
         display: inline-flex;
         justify-content: center;
       }
-      #first a:first-child {
+      #first a:first-child,#more-second a:first-child  {
         color: $first-first;
         border-color: $first-first;
       }
-      #first a:nth-child(2) {
+      #first a:nth-child(2),#more-first a:first-child {
         color: $first-second;
         border-color: $first-second;
       }
-      #first a:nth-child(3) {
+      #first a:nth-child(3),#more-third a:first-child {
         color: $first-third;
         border-color: $first-third;
       }
 
-      #second a:first-child {
+      #second a:first-child,#more-first a:nth-child(3) {
         color: $second-first;
         border-color: $second-first;
       }
-      #second a:nth-child(2) {
+      #second a:nth-child(2),#more-third a:nth-child(2) {
         color: $second-second;
         border-color: $second-second;
       }
-      #second a:nth-child(3) {
+      #second a:nth-child(3),#more-second a:nth-child(2) {
         color: $second-third;
         border-color: $second-third;
       }
 
-      #third a:first-child {
+      #third a:first-child,#more-fourth a:first-child {
         color: $third-first;
         border-color: $third-first;
       }
-      #third a:nth-child(2) {
+      #third a:nth-child(2),#more-first a:nth-child(2) {
         color: $third-second;
         border-color: $third-second;
       }
-      #third a:nth-child(3) {
+      #third a:nth-child(3),#more-second a:nth-child(3) {
         color: $third-third;
         border-color: $third-third;
       }
 
-      #fourth a:first-child {
+      #fourth a:first-child,#more-fourth a:last-child {
         color: $fourth-first;
         border-color: $fourth-first;
       }
-      #fourth a:nth-child(2) {
+      #fourth a:nth-child(2),#more-fourth a:nth-child(2) {
         color: $fourth-second;
         border-color: $fourth-second;
       }
-      #fourth a:nth-child(3) {
+      #fourth a:nth-child(3),#more-third a:nth-child(3) {
         color: $fourth-third;
         border-color: $fourth-third;
       }
+
     .button-genre {
       text-transform: uppercase;
     }
-    .button-genre.principal{
+    .button-genre.principal, .button-genre.more {
       cursor: pointer;
       text-align: center;
       font-weight: bold;
@@ -103,15 +104,26 @@ $fourth-third:#38BB69;
       display: none;
     }
 
+    .button-more {
+      cursor: pointer;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+      width: 160px;
+      padding: 15px 10px;
+      margin: 5px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+    }
+
   }
 
 
   .ranges {
-
     display: flex;
     flex-direction: column;
     input {
-      width: 75%;
+      width: 333px;
       margin: auto;
     }
     input[type="range"] {
@@ -146,7 +158,7 @@ $fourth-third:#38BB69;
       margin: auto;
       width: 50%;
       cursor: pointer;
-      height: 8.4px;
+      height: 10px;
       box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
       background: #333333;
       border-radius: 5px;
