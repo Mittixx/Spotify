@@ -137,6 +137,9 @@ $fourth-third:#38BB69;
         display: inline;
         justify-content: space-between;
       }
+      li.my-value {
+        font-weight: bold;
+      }
     }
 
     input {
@@ -185,9 +188,14 @@ $fourth-third:#38BB69;
     }
   }
   #buttonCreate {
-    margin: 20px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
+
+  }
+
+  input.buttonCreate {
+    margin-bottom: 20px;
   }
 
   .buttonCreate {
@@ -203,6 +211,7 @@ $fourth-third:#38BB69;
     font-weight: 800;
     -webkit-transition: background-color 1s;
     transition: background-color 1s;
+
 }
 
 .buttonCreate:hover {

@@ -38,7 +38,15 @@ $(".button-more").click( function () {
 
 });
 
-$('.rangeIn').change( function() {
-    alert($(this).val());
-    $(this).closest('.my-value').text($(this).val());
+$('.rangeIn').on("change mousemove", function () {
+    //alert($(this).parent().children('ul.row-label').children('li.my-value').text());
+    $(this).parent().children('ul.row-label').children('li.my-value').text($(this).val());
 });
+
+/*$('.rangeIn').change( function() {
+    //alert($(this).parent().children('ul.row-label').children('li.my-value').text());
+
+
+    $(this).parent().children('ul.row-label').children('li.my-value').text($(this).val());
+});
+*/

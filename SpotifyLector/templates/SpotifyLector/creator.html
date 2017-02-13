@@ -18,7 +18,7 @@
 {% block content %}
     <div class="genre">
         <p>Commence par choisir entre 1 et 3 styles musicaux parmis ceux proposés en dessous,
-        le bouton Plus de genre te permets d'avoir un choix plus large.</p>
+            le bouton <i>Plus de genre</i> te permets d'avoir un choix plus large.</p>
         <div id="first" class="column">
             <a class="button-genre principal">Blues</a>
             <a class="button-genre principal">Bossanova</a>
@@ -73,9 +73,9 @@
     <div class="ranges">
         <div class="row">
             <p>Nombre de musiques </p>
-            <input id="numberSongs" class="rangeIn" type="range" max="100" min="0" step="1">
+            <input id="numberSongs" class="rangeIn" type="range" max="100" value="50" min="1" step="1">
             <ul class="row-label">
-                <li>0</li>
+                <li>1</li>
                 <li class="my-value">50</li>
                 <li>100</li>
             </ul>
@@ -136,7 +136,7 @@
         {% endcomment %}
         <div class="row">
             <p title="0.0 pour des musiques tristes et dépressives, 1.0 pour des musiques euphoriques et joyeuses.">Positivité</p>
-            <input id="valence" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+            <input id="valence" class="rangeIn" type="range" max="1.0" min="0.0"  step="0.1">
             <ul class="row-label">
                 <li>0.0</li>
                 <li class="my-value">0.5</li>
