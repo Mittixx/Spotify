@@ -17,17 +17,29 @@ $fourth-second:#E98B25;
 $fourth-third:#38BB69;
 
 
-#body {
-  width:85%;
-}
-
-#content {
-  width: 75%;
 
 
-  .genre {
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width : 2500px) {
+
+  #body {
+    width:85%;
+  }
+
+  #content {
+    width: 75%;
+
+
+    .genre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .description {
+        display: flex;
+        max-width: 600px;
+        p {
+          margin: 12px;
+        }
+      }
       .column {
         display: inline-flex;
         justify-content: center;
@@ -84,139 +96,181 @@ $fourth-third:#38BB69;
         border-color: $fourth-third;
       }
 
-    .button-genre {
-      text-transform: uppercase;
-    }
-    .button-genre.principal, .button-genre.more {
-      cursor: pointer;
-      text-align: center;
-      font-weight: bold;
-      color: #fff;
-      width: 160px;
-      padding: 15px 10px;
-      margin: 5px;
-      border: 1px solid #fff;
-      border-radius: 5px;
-
-    }
-
-    .button-genre.more{
-      display: none;
-    }
-
-    .button-more {
-      cursor: pointer;
-      text-align: center;
-      font-weight: bold;
-      color: #fff;
-      width: 160px;
-      padding: 15px 10px;
-      margin: 5px;
-      border: 1px solid #fff;
-      border-radius: 5px;
-    }
-
-  }
-
-
-  .ranges {
-    display: flex;
-    flex-direction: column;
-
-    .row {
-      margin: 14px;
-    }
-    ul.row-label {
-      color: #fff;
-      width: 333px;
-      margin: auto;
-      padding: 0;
-      display: flex;
-      justify-content: space-between;
-      li {
-        display: inline;
-        justify-content: space-between;
+      .button-genre {
+        text-transform: uppercase;
       }
-      li.my-value {
+      .button-genre.principal, .button-genre.more {
+        cursor: pointer;
+        text-align: center;
         font-weight: bold;
+        color: #fff;
+        width: 160px;
+        padding: 15px 10px;
+        margin: 5px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+
       }
+
+      .button-genre.more{
+        display: none;
+      }
+
+      .button-more {
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+        width: 160px;
+        padding: 15px 10px;
+        margin: 5px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+      }
+
     }
 
-    input {
-      width: 333px;
-      margin: auto;
-    }
-    input[type="range"] {
+    .ranges {
       display: flex;
-      -webkit-appearance: none;
-      background: transparent;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 120px;
+      .column {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 120px;
+
+        .advise {
+          display: block;
+          width: 30%;
+          margin-right: 30px;
+          padding-top: 60px;
+          text-align: center;
+          position: absolute;
+          right: 0%;
+          visibility: hidden;
+          p {
+            b
+            {
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+      .row {
+        margin: 14px;
+        width: 50%;
+        padding-bottom: 15px;
+        text-align: center;
+        display: block;
+        position: absolute;
+        left: 25%;
+      }
+      ul.row-label {
+        color: #fff;
+        width: 333px;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        li {
+          display: inline;
+          justify-content: space-between;
+        }
+        li.my-value {
+          font-weight: bold;
+        }
+      }
+
+      input {
+        width: 333px;
+        margin: auto;
+      }
+      input[type="range"] {
+        display: flex;
+        -webkit-appearance: none;
+        background: transparent;
+        margin-bottom: 20px;
+      }
+
+
+      input[type=range]:focus {
+        outline: none;
+      }
+
+      input[type=range]::-ms-track {
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 36px;
+        width: 16px;
+        border: 1px solid #000000;
+        border-radius: 3px;
+        background: #74A82A;
+        cursor: pointer;
+        margin-top: -14px;
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      }
+
+      input[type="range"]::-webkit-slider-runnable-track {
+        margin: auto;
+        width: 50%;
+        cursor: pointer;
+        height: 10px;
+        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+        background: #333333;
+        border-radius: 5px;
+        border:0.2px solid #010101;
+      }
+    }
+    #buttonCreate {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    input.buttonCreate {
       margin-bottom: 20px;
     }
 
+    .buttonCreate {
+      background-color: #74A82A;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      border-radius: 40px;
+      padding: 30px 50px;
+      border-style: none;
+      color: white;
+      font-size: 1.5em;
+      font-weight: 800;
+      -webkit-transition: background-color 1s;
+      transition: background-color 1s;
 
-    input[type=range]:focus {
-      outline: none;
     }
 
-    input[type=range]::-ms-track {
+    .buttonCreate:hover {
+      background-color:#446001 ;
+      color: #fff;
       cursor: pointer;
-      background: transparent;
-      border-color: transparent;
-      color: transparent;
-    }
-    input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      height: 36px;
-      width: 16px;
-      border: 1px solid #000000;
-      border-radius: 3px;
-      background: #74A82A;
-      cursor: pointer;
-      margin-top: -14px;
-      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    }
-
-    input[type="range"]::-webkit-slider-runnable-track {
-      margin: auto;
-      width: 50%;
-      cursor: pointer;
-      height: 10px;
-      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-      background: #333333;
-      border-radius: 5px;
-      border:0.2px solid #010101;
     }
   }
-  #buttonCreate {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-
-  }
-
-  input.buttonCreate {
-    margin-bottom: 20px;
-  }
-
-  .buttonCreate {
-    background-color: #74A82A;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-    border-radius: 40px;
-    padding: 30px 50px;
-    border-style: none;
-    color: white;
-    font-size: 1.5em;
-    font-weight: 800;
-    -webkit-transition: background-color 1s;
-    transition: background-color 1s;
-
 }
 
-.buttonCreate:hover {
-    background-color:#446001 ;
-    color: #fff;
-    cursor: pointer;
-}
+@media screen and (max-width: 1100px)  {
+  .ranges {
+    .column {
+      .advise {
+        display: none;
+        p {
+          display: none;
+        }
+      }
+    }
+  }
 }

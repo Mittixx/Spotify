@@ -17,8 +17,10 @@
 
 {% block content %}
     <div class="genre">
+        <div class="description">
         <p>Commence par choisir entre 1 et 3 styles musicaux parmis ceux proposés en dessous,
             le bouton <i>Plus de genre</i> te permets d'avoir un choix plus large.</p>
+        </div>
         <div id="first" class="column">
             <a class="button-genre principal">Blues</a>
             <a class="button-genre principal">Bossanova</a>
@@ -71,77 +73,119 @@
 
 
     <div class="ranges">
-        <div class="row">
-            <p>Nombre de musiques </p>
-            <input id="numberSongs" class="rangeIn" type="range" max="100" value="50" min="1" step="1">
-            <ul class="row-label">
-                <li>1</li>
-                <li class="my-value">50</li>
-                <li>100</li>
-            </ul>
+        <div class="column top">
+            <div class="row">
+                <p class="title">Nombre de musiques</p>
+                <input id="numberSongs" class="rangeIn" type="range" max="100" value="50" min="1" step="1">
+                <ul class="row-label">
+                    <li>1</li>
+                    <li class="my-value">50</li>
+                    <li>100</li>
+                </ul>
+            </div>
+            <div class="advise">
+                <p>Conseil : Fais glisser le curseur pour choisir entre 1 et 100 musiques
+                    dans ta playlist. Une playlist de 50 musiques dure environ 2h30.</p>
+            </div>
         </div>
 
-        <div class="row">
-            <p>Acoustique</p>
-            <input id="acousticness" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
-            <ul class="row-label">
-                <li>0</li>
-                <li class="my-value">0.5</li>
-                <li>1.0</li>
-            </ul>
+        <div class="column">
+            <div class="row">
+                <p class="title">Acoustique</p>
+                <input id="acousticness" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+                <ul class="row-label">
+                    <li>0</li>
+                    <li class="my-value">0.5</li>
+                    <li>1.0</li>
+                </ul>
+            </div>
+            <div class="advise">
+                <p>Conseil : Fais glisser vers 0.0 si tu préfères des musiques sans trop
+                    de paroles, ou alors fais glisser vers 1.0 pour des musiques vocales.</p>
+            </div>
         </div>
 
-        <div class="row">
-            <p title="De 0.0 (peu dansante) à 1.0 (très dansante).">Dansante</p>
-            <input id="danceability" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
-            <ul class="row-label">
-                <li>0.0</li>
-                <li class="my-value">0.5</li>
-                <li>1.0</li>
-            </ul>
+        <div class="column">
+            <div class="row">
+                <p class="title">Dansante</p>
+                <input id="danceability" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+                <ul class="row-label">
+                    <li>0.0</li>
+                    <li class="my-value">0.5</li>
+                    <li>1.0</li>
+                </ul>
+            </div>
+            <div class="advise">
+                    <p>Conseil : Tu as envie de danser ? Alors fais glisser vers 1.0 sinon fais
+                        glisser vers 0.0.</p>
+            </div>
         </div>
 
-        <div class="row">
-            <p title="Une musique très énergique (1.0) sera bruyante, rapide et puissante.">Energétique</p>
-            <input id="energy" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
-            <ul class="row-label">
-                <li>0.0</li>
-                <li class="my-value">0.5</li>
-                <li>1.0</li>
-            </ul>
+        <div class="column">
+            <div class="row">
+                <p class="title">Energique</p>
+                <input id="energy" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+                <ul class="row-label">
+                    <li>0.0</li>
+                    <li class="my-value">0.5</li>
+                    <li>1.0</li>
+                </ul>
+            </div>
+            <div class="advise">
+                    <p>Conseil : Une musique très énergique (curseur vers 1.0) sera rapide et puissante,
+                        tandis qu'une musique peu énergique (curseur vers 0.0) sera lente et calme.</p>
+            </div>
         </div>
 
-        <div class="row">
-            <p title="1.0 représente une musique sans vocal, au dessus de 0.5
-            les musiques comporteront très peu de vocal.">Instrumentale</p>
-            <input id="instrumentalness" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
-            <ul class="row-label">
-                <li>0.0</li>
-                <li class="my-value">0.5</li>
-                <li>1.0</li>
-            </ul>
+        <div class="column">
+            <div class="row">
+                <p class="title">Instrumentale</p>
+                <input id="instrumentalness" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+                <ul class="row-label">
+                    <li>0.0</li>
+                    <li class="my-value">0.5</li>
+                    <li>1.0</li>
+                </ul>
+            </div>
+            <div class="advise">
+                    <p>Conseil : 1.0 représente une musique sans vocal, au dessus de 0.5
+                les musiques comporteront très peu de vocal..</p>
+            </div>
         </div>
 
-         <div class="row">
-            <p>Popularité</p>
-            <input id="popularity" class="rangeIn" type="range" max="100" min="0" step="1">
-            <ul class="row-label">
-                <li>0</li>
-                <li class="my-value">50</li>
-                <li>100</li>
-            </ul>
+        <div class="column">
+             <div class="row">
+                <p class="title">Popularité</p>
+                <input id="popularity" class="rangeIn" type="range" max="100" min="0" step="1">
+                <ul class="row-label">
+                    <li>0</li>
+                    <li class="my-value">50</li>
+                    <li>100</li>
+                </ul>
+            </div>
+            <div class="advise">
+                    <p>Conseil : Envie de musique populaire ? Fais glisser le curseur vers 100.
+                    Envie de découvrir de nouvelles musiques ? Fais glisser en dessous de 50.</p>
+            </div>
         </div>
         {% comment %}<p>Paroles</p>
         <input id="speechiness" type="range" max="1.0" min="0.0" step="0.1">
         {% endcomment %}
-        <div class="row">
-            <p title="0.0 pour des musiques tristes et dépressives, 1.0 pour des musiques euphoriques et joyeuses.">Positivité</p>
-            <input id="valence" class="rangeIn" type="range" max="1.0" min="0.0"  step="0.1">
-            <ul class="row-label">
-                <li>0.0</li>
-                <li class="my-value">0.5</li>
-                <li>1.0</li>
-            </ul>
+
+        <div class="column">
+            <div class="row">
+                <p class="title">Positivité</p>
+                <input id="valence" class="rangeIn" type="range" max="1.0" min="0.0"  step="0.1">
+                <ul class="row-label">
+                    <li>0.0</li>
+                    <li class="my-value">0.5</li>
+                    <li>1.0</li>
+                </ul>
+            </div>
+            <div class="advise">
+                    <p>Conseil : D'humeur joyeuse ? Fais glisser le curseur vers 1.0. Si tu te sens dépressif...
+                    Fais aussi glisser vers 1.0 <b>&#9786;</b>.</p>
+            </div>
         </div>
 
 

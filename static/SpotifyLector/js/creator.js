@@ -43,10 +43,11 @@ $('.rangeIn').on("change mousemove", function () {
     $(this).parent().children('ul.row-label').children('li.my-value').text($(this).val());
 });
 
-/*$('.rangeIn').change( function() {
-    //alert($(this).parent().children('ul.row-label').children('li.my-value').text());
-
-
-    $(this).parent().children('ul.row-label').children('li.my-value').text($(this).val());
+$('.title').on('mouseenter', function () {
+    $(this).parent().next().css('visibility','visible');
+    $(this).parent().next().fadeIn(2000);
 });
-*/
+
+$('.title').on('mouseout', function () {
+    $(this).parent().next().fadeOut(2000);
+});
