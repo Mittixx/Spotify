@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block links %}
+    <link rel="stylesheet"
+          type="text/css"
+          media="all"
+          href="{% static "SpotifyLector/css/SpotifyLector/creator.css" %}"
+    />
+{% endblock %}
+
+{% block title %}
+    Spotify Playlist
+{% endblock %}
+{%  block titleHeader %}
+    Spotify Playlist Creator
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+
+{%  block scripts %}
+    <script src={% static "SpotifyLector/js/jquery-3.1.1.js" %}></script>
+    <script src={% static "SpotifyLector/js/base.js" %}></script>
+{%  endblock %}
