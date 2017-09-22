@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block links %}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet"
           type="text/css"
           media="all"
-          href="{% static "SpotifyLector/css/SpotifyLector/creator.css" %}"
+          href="{% static "SpotifyLector/css/SpotifyLector/playlistView.css" %}"
     />
 {% endblock %}
 
@@ -16,11 +17,49 @@
 {% endblock %}
 
 {% block content %}
+    {% comment %}
+     TODO Feuille a styliser différement
+     TODO Ajouter boutons (ex:menu...)
+    {% endcomment %}
+    <div class="playlist_name">
+        <form action="{% url 'createPlaylist' %}" method="post">
+            {% csrf_token %}
+            <input type="text" autofocus="true" name="playlist_name" value="Nom de la playlist">
+            <button id="btn_add_playlist">Créer playlist</button>
+        </form>
+    </div>
+    <div class="musics">
+        {% for song_name,artist_name,album_name,album_cover,preview_url in total %}
+            {% ifnotequal song_name '' %}
+            <div class="music">
+                <div class="music-description">
+                    <p class="song-name">{{ song_name }} - {{ artist_name }} </p>
+                    <p class="album-name"> {{ album_name }}</p>
+                </div>
+                <div class="album-preview">
+                    {%  if album_cover  != None %}
+                        <img class="cover-album" src="{{ album_cover }}" alt="{{ album_name }}">
+                    {% else %}
+                        <img class="cover-album none" src="{% static 'SpotifyLector/img/no_cover.jpg' %}" alt="{{ album_name }}">
+                    {% endif %}
+                    {%  if preview_url  != None %}
+                        <audio class="audio-player" src="{{ preview_url }}"></audio>
+
+                        <div class="play_btn">
+
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endifnotequal %}
+        {% endfor %}
+    </div>
+
 
 {% endblock %}
 
 
 {%  block scripts %}
     <script src={% static "SpotifyLector/js/jquery-3.1.1.js" %}></script>
-    <script src={% static "SpotifyLector/js/base.js" %}></script>
+    <script src={% static "SpotifyLector/js/playlistview.js" %}></script>
 {%  endblock %}

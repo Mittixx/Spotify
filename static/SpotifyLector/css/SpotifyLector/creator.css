@@ -142,13 +142,21 @@
     text-align: center;
     position: absolute;
     right: 0%;
-    visibility: hidden;
+    opacity: 0;
   }
-  /* line 153, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 152, ../../../../sass/SpotifyLector/creator.scss */
+  #content .ranges .column .advise p {
+    color: #5D5C61;
+  }
+  /* line 154, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges .column .advise p b {
     font-size: 1.2em;
   }
-  /* line 160, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 159, ../../../../sass/SpotifyLector/creator.scss */
+  #content .ranges .column .advise p:hover {
+    cursor: default;
+  }
+  /* line 164, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges .row {
     margin: 14px;
     width: 50%;
@@ -158,7 +166,7 @@
     position: absolute;
     left: 25%;
   }
-  /* line 169, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 173, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges ul.row-label {
     color: #fff;
     width: 333px;
@@ -167,39 +175,39 @@
     display: flex;
     justify-content: space-between;
   }
-  /* line 176, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 180, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges ul.row-label li {
     display: inline;
     justify-content: space-between;
   }
-  /* line 180, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 184, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges ul.row-label li.my-value {
     font-weight: bold;
   }
-  /* line 185, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 189, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges input {
     width: 333px;
     margin: auto;
   }
-  /* line 189, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 193, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges input[type="range"] {
     display: flex;
     -webkit-appearance: none;
     background: transparent;
     margin-bottom: 20px;
   }
-  /* line 197, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 201, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges input[type=range]:focus {
     outline: none;
   }
-  /* line 201, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 205, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges input[type=range]::-ms-track {
     cursor: pointer;
     background: transparent;
     border-color: transparent;
     color: transparent;
   }
-  /* line 207, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 211, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 36px;
@@ -211,7 +219,7 @@
     margin-top: -14px;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   }
-  /* line 219, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 223, ../../../../sass/SpotifyLector/creator.scss */
   #content .ranges input[type="range"]::-webkit-slider-runnable-track {
     margin: auto;
     width: 50%;
@@ -222,17 +230,17 @@
     border-radius: 5px;
     border: 0.2px solid #010101;
   }
-  /* line 230, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 234, ../../../../sass/SpotifyLector/creator.scss */
   #content #buttonCreate {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
   }
-  /* line 237, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 240, ../../../../sass/SpotifyLector/creator.scss */
   #content input.buttonCreate {
     margin-bottom: 20px;
+    margin-top: -45px;
   }
-  /* line 241, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 245, ../../../../sass/SpotifyLector/creator.scss */
   #content .buttonCreate {
     background-color: #74A82A;
     left: 50%;
@@ -247,7 +255,7 @@
     -webkit-transition: background-color 1s;
     transition: background-color 1s;
   }
-  /* line 257, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 261, ../../../../sass/SpotifyLector/creator.scss */
   #content .buttonCreate:hover {
     background-color: #446001;
     color: #fff;
@@ -255,12 +263,21 @@
   }
 }
 @media screen and (max-width: 1100px) {
-  /* line 268, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 272, ../../../../sass/SpotifyLector/creator.scss */
   .ranges .column .advise {
-    display: none;
+    opacity: 0;
   }
-  /* line 270, ../../../../sass/SpotifyLector/creator.scss */
+  /* line 274, ../../../../sass/SpotifyLector/creator.scss */
   .ranges .column .advise p {
-    display: none;
+    color: #5D5C61;
+    opacity: 0;
   }
+  /* line 278, ../../../../sass/SpotifyLector/creator.scss */
+  .ranges .column .advise p:hover {
+    cursor: default;
+  }
+}
+/* line 286, ../../../../sass/SpotifyLector/creator.scss */
+.description p {
+  text-align: justify;
 }

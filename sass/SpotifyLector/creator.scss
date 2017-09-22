@@ -148,12 +148,16 @@ $fourth-third:#38BB69;
           text-align: center;
           position: absolute;
           right: 0%;
-          visibility: hidden;
+          opacity: 0;
           p {
+            color:#5D5C61;
             b
             {
               font-size: 1.2em;
             }
+          }
+          p:hover {
+            cursor:default;
           }
         }
       }
@@ -228,7 +232,6 @@ $fourth-third:#38BB69;
       }
     }
     #buttonCreate {
-      margin-top: 20px;
       display: flex;
       justify-content: center;
 
@@ -236,6 +239,7 @@ $fourth-third:#38BB69;
 
     input.buttonCreate {
       margin-bottom: 20px;
+      margin-top: -45px;
     }
 
     .buttonCreate {
@@ -266,11 +270,19 @@ $fourth-third:#38BB69;
   .ranges {
     .column {
       .advise {
-        display: none;
+        opacity: 0;
         p {
-          display: none;
+          color:#5D5C61;
+          opacity:0;
+        }
+        p:hover {
+          cursor:default;
         }
       }
     }
   }
+}
+
+.description p {
+    text-align: justify;
 }

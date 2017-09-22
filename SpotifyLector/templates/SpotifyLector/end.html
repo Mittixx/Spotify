@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block links %}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet"
+          type="text/css"
+          media="all"
+          href="{% static "SpotifyLector/css/SpotifyLector/playlistView.css" %}"
+    />
+{% endblock %}
+
+{% block title %}
+    Playlist {{ playlist_name }}
+{% endblock %}
+    {% ifnotequal  playlist_snapshot_id 400 %}
+        <title>{{ playlist_name }}</title>
+
+    {% else %}
+        <title>Erreur : {{ playlist_name }}</title>
+
+    {% endifnotequal %}
+
+{% block content %}
+    {% comment %}
+    TODO Feuille a styliser
+    {% endcomment %}
+    {% ifnotequal  playlist_snapshot_id 400 %}
+
+        <p> La playlist a bien été créée,
+        <a href="http://open.spotify.com/user/{{ user_id }}/playlist/{{ playlist_id }}">{{ playlist_name }}</a>
+        </p>
+    {% else %}
+
+    {% endifnotequal %}
+{%  endblock %}

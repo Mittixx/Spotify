@@ -4,11 +4,14 @@
 var clickedButton = 0;
 
 $(".button-genre").click( function () {
+    var txt= $(this).data("type");
+
     if($(this).hasClass("clicked"))
     {
         $(this).css('color',$(this).css('background-color'));
         $(this).css('background','transparent');
         $(this).removeClass("clicked");
+        $("#genre"+clickedButton).val(null);
         clickedButton--;
     }
     else if(clickedButton < 3)
@@ -17,10 +20,26 @@ $(".button-genre").click( function () {
         $(this).css('color','white');
         clickedButton++;
         $(this).addClass("clicked");
+
+        $("#genre"+clickedButton).val(txt);
     }
 
+        var buttonCreate = $(".buttonCreate");
+    if(clickedButton == 0)
+    {
+        buttonCreate.prop('disabled',true);
+        buttonCreate.attr('title',"Veuillez choisir au moins 1 genre musical au dessus.");
+    }
+    else
+    {
+        buttonCreate.prop('disabled',false);
+        buttonCreate.attr('title',"");
+    }
 
 });
+
+
+
 
 $(".button-more").click( function () {
     if ($(this).hasClass("more-clicked"))
@@ -39,15 +58,14 @@ $(".button-more").click( function () {
 });
 
 $('.rangeIn').on("change mousemove", function () {
-    //alert($(this).parent().children('ul.row-label').children('li.my-value').text());
+
     $(this).parent().children('ul.row-label').children('li.my-value').text($(this).val());
+
 });
 
-$('.title').on('mouseenter', function () {
-    $(this).parent().next().css('visibility','visible');
-    $(this).parent().next().fadeIn(2000);
-});
 
-$('.title').on('mouseout', function () {
-    $(this).parent().next().fadeOut(2000);
+$('.row').hover( function () {
+    $(this).next('.advise').fadeTo(700,1);
+}, function () {
+    $(this).next('.advise').fadeTo(1500,0);
 });

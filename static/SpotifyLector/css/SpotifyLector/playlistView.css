@@ -1,0 +1,135 @@
+/* Created by Tanguy */
+@-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+    transform: translateZ(160px);
+  }
+}
+/* line 6, ../../../../sass/SpotifyLector/playlistView.scss */
+#content {
+  width: 90%;
+}
+
+/* line 10, ../../../../sass/SpotifyLector/playlistView.scss */
+.playlist_name {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+/* line 15, ../../../../sass/SpotifyLector/playlistView.scss */
+.playlist_name input[type='text'] {
+  font-family: 'Roboto',sans-serif;
+  font-size: 1em;
+  text-align: center;
+  border: none;
+  margin: 0 10px 0 0;
+  border: 0;
+  border-bottom: 2px solid #74A82A;
+  border-top: 2px solid #74A82A;
+  background-color: transparent;
+  padding: 7px 10px;
+  font-weight: 700;
+  color: #FFF;
+}
+/* line 28, ../../../../sass/SpotifyLector/playlistView.scss */
+.playlist_name input[type='text']:focus {
+  outline: 0;
+}
+/* line 32, ../../../../sass/SpotifyLector/playlistView.scss */
+.playlist_name button, .playlist_name input[type='text'] {
+  font-family: 'Roboto',sans-serif;
+  font-size: 1em;
+  text-align: center;
+  border: none;
+  border: 0;
+  border-bottom: 2px solid #74A82A;
+  border-top: 2px solid #74A82A;
+  background-color: transparent;
+  padding: 7px 10px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+/* line 47, ../../../../sass/SpotifyLector/playlistView.scss */
+.music {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* line 54, ../../../../sass/SpotifyLector/playlistView.scss */
+.play_btn {
+  position: absolute;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  z-index: 1;
+  background-color: transparent;
+  cursor: pointer;
+}
+/* line 64, ../../../../sass/SpotifyLector/playlistView.scss */
+.play_btn:after {
+  box-sizing: border-box;
+  content: url("/static/SpotifyLector/img/play.png");
+  width: 64px;
+  height: 64px;
+  opacity: 0;
+  position: absolute;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -webkit-filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white);
+  filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px -1px 0 white);
+}
+
+/* line 81, ../../../../sass/SpotifyLector/playlistView.scss */
+.play_btn:hover:after {
+  opacity: 0.7;
+}
+
+/* line 87, ../../../../sass/SpotifyLector/playlistView.scss */
+.cover-album:not(.none) {
+  transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.5s ease-in-out;
+}
+
+/* line 94, ../../../../sass/SpotifyLector/playlistView.scss */
+.cover-album:hover {
+  -webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -moz-animation: slide-fwd-center 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-fwd-center 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* line 100, ../../../../sass/SpotifyLector/playlistView.scss */
+.album-preview {
+  align-self: center;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+/* line 106, ../../../../sass/SpotifyLector/playlistView.scss */
+.music-description {
+  width: 50%;
+  margin-left: 27px;
+}
+
+/* line 111, ../../../../sass/SpotifyLector/playlistView.scss */
+#btn_add_playlist:hover {
+  cursor: pointer;
+}

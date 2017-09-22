@@ -6,6 +6,7 @@
     <title>{% block title %} Spotify playlist creator {% endblock %}</title>
     {% load staticfiles %}
     {% block links %}{% endblock %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="all" href="{% static "SpotifyLector/css/SpotifyLector/base.css" %}" />
     <link rel="icon" type="image/x-icon" href="{% static 'SpotifyLector/img/faviconSpotify.ico' %}"/>
 </head>
@@ -26,8 +27,6 @@
             <section id="content">
                     {% block content %}{% endblock %}
             </section>
-
-        <footer>&copy; Tanguy Blochet</footer>
     </div>
     {%  block scripts %}{%  endblock %}
 </body>

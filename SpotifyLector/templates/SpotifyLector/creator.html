@@ -16,52 +16,56 @@
 {% endblock %}
 
 {% block content %}
+
+    {% comment %}
+    // TODO Ajouter la recherche à partir d'un artiste
+    {% endcomment %}
     <div class="genre">
         <div class="description">
         <p>Commence par choisir entre 1 et 3 styles musicaux parmis ceux proposés en dessous,
             le bouton <i>Plus de genre</i> te permets d'avoir un choix plus large.</p>
         </div>
         <div id="first" class="column">
-            <a class="button-genre principal">Blues</a>
-            <a class="button-genre principal">Bossanova</a>
-            <a class="button-genre principal">Classical</a>
+            <a class="button-genre principal" data-type="blues">Blues</a>
+            <a class="button-genre principal" data-type="bossanova">Bossanova</a>
+            <a class="button-genre principal" data-type="classical">Classical</a>
         </div>
         <div id="second" class="column">
-            <a class="button-genre principal">Deep House</a>
-            <a class="button-genre principal">Hip-Hop</a>
-            <a class="button-genre principal">Indie</a>
+            <a class="button-genre principal" data-type="deep-house">Deep House</a>
+            <a class="button-genre principal" data-type="hip-hop">Hip-Hop</a>
+            <a class="button-genre principal" data-type="indie">Indie</a>
         </div>
         <div id="third" class="column">
-            <a class="button-genre principal">Jazz</a>
-            <a class="button-genre principal">Pop</a>
-            <a class="button-genre principal">Rock</a>
+            <a class="button-genre principal" data-type="jazz">Jazz</a>
+            <a class="button-genre principal" data-type="pop">Pop</a>
+            <a class="button-genre principal" data-type="rock">Rock</a>
         </div>
         <div id="fourth" class="column">
-            <a class="button-genre principal">Rock alt</a>
-            <a class="button-genre principal">Soul</a>
-            <a class="button-genre principal">Study</a>
+            <a class="button-genre principal" data-type="alt-rock">Rock alt</a>
+            <a class="button-genre principal" data-type="soul">Soul</a>
+            <a class="button-genre principal" data-type="study">Study</a>
         </div>
 
 
         <div id="more-first" class="column">
-            <a class="button-genre more">Acoustique</a>
-            <a class="button-genre more">Chill</a>
-            <a class="button-genre more">Dub</a>
+            <a class="button-genre more" data-type="acoustic">Acoustique</a>
+            <a class="button-genre more" data-type="chill">Chill</a>
+            <a class="button-genre more" data-type="dub">Dub</a>
         </div>
         <div id="more-second" class="column">
-            <a class="button-genre more">Folk</a>
-            <a class="button-genre more">Funk</a>
-            <a class="button-genre more">Gospel</a>
+            <a class="button-genre more" data-type="folk">Folk</a>
+            <a class="button-genre more" data-type="funk">Funk</a>
+            <a class="button-genre more" data-type="gospel">Gospel</a>
         </div>
         <div id="more-third" class="column">
-            <a class="button-genre more">Piano</a>
-            <a class="button-genre more">Power-Pop</a>
-            <a class="button-genre more">Punk-Rock</a>
+            <a class="button-genre more" data-type="piano">Piano</a>
+            <a class="button-genre more" data-type="power-pop">Power-Pop</a>
+            <a class="button-genre more" data-type="punk-rock">Punk-Rock</a>
         </div>
         <div id="more-fourth" class="column">
-            <a class="button-genre more">Rainy-Day</a>
-            <a class="button-genre more">Road-Trip</a>
-            <a class="button-genre more">Ska</a>
+            <a class="button-genre more" data-type="rainy-day">Rainy-Day</a>
+            <a class="button-genre more" data-type="reggae">Reggae</a>
+            <a class="button-genre more" data-type="ska">Ska</a>
         </div>
 
         <div id="more" class="column">
@@ -70,13 +74,15 @@
 
     </div>
 
-
+    <div id="buttonCreate">
+        <form action="{% url 'postForm' %}" method="post">
+        {% csrf_token %}
 
     <div class="ranges">
         <div class="column top">
             <div class="row">
                 <p class="title">Nombre de musiques</p>
-                <input id="numberSongs" class="rangeIn" type="range" max="100" value="50" min="1" step="1">
+                <input id="numberSongs" name="numberSongs" class="rangeIn" type="range" max="100" value="50" min="1" step="1">
                 <ul class="row-label">
                     <li>1</li>
                     <li class="my-value">50</li>
@@ -92,7 +98,7 @@
         <div class="column">
             <div class="row">
                 <p class="title">Acoustique</p>
-                <input id="acousticness" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+                <input id="acousticness" name="acousticness" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
                 <ul class="row-label">
                     <li>0</li>
                     <li class="my-value">0.5</li>
@@ -108,7 +114,7 @@
         <div class="column">
             <div class="row">
                 <p class="title">Dansante</p>
-                <input id="danceability" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+                <input id="danceability" name="danceability" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
                 <ul class="row-label">
                     <li>0.0</li>
                     <li class="my-value">0.5</li>
@@ -124,7 +130,7 @@
         <div class="column">
             <div class="row">
                 <p class="title">Energique</p>
-                <input id="energy" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+                <input id="energy" name="energy" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
                 <ul class="row-label">
                     <li>0.0</li>
                     <li class="my-value">0.5</li>
@@ -140,7 +146,7 @@
         <div class="column">
             <div class="row">
                 <p class="title">Instrumentale</p>
-                <input id="instrumentalness" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
+                <input id="instrumentalness" name="instrumentalness" class="rangeIn" type="range" max="1.0" min="0.0" step="0.1">
                 <ul class="row-label">
                     <li>0.0</li>
                     <li class="my-value">0.5</li>
@@ -156,7 +162,7 @@
         <div class="column">
              <div class="row">
                 <p class="title">Popularité</p>
-                <input id="popularity" class="rangeIn" type="range" max="100" min="0" step="1">
+                <input id="popularity" name="popularity" class="rangeIn" type="range" max="100" min="0" step="1">
                 <ul class="row-label">
                     <li>0</li>
                     <li class="my-value">50</li>
@@ -175,7 +181,7 @@
         <div class="column">
             <div class="row">
                 <p class="title">Positivité</p>
-                <input id="valence" class="rangeIn" type="range" max="1.0" min="0.0"  step="0.1">
+                <input id="valence" name="valence" class="rangeIn" type="range" max="1.0" min="0.0"  step="0.1">
                 <ul class="row-label">
                     <li>0.0</li>
                     <li class="my-value">0.5</li>
@@ -187,11 +193,14 @@
                     Fais aussi glisser vers 1.0 <b>&#9786;</b>.</p>
             </div>
         </div>
-
-
-    <div id="buttonCreate">
-        <input class="buttonCreate" type="submit" value="Créer playlist ! ">
     </div>
+
+            <input id="genre1" type="hidden" name="genre1" value="">
+            <input id="genre2" type="hidden" name="genre2" value="">
+            <input id="genre3" type="hidden" name="genre3" value="">
+            <input class="buttonCreate" disabled="true" type="submit" title="Veuillez choisir au moins 1 genre musical" value="Créer playlist !">
+        </form>
+        </div>
     </div>
 
 {% endblock %}
